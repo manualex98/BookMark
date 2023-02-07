@@ -1,0 +1,314 @@
+.home-text-center1{
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    padding:8px;       
+    top: 10px;
+    left: 10;
+    width: 100%;
+    size: 400%;
+    font-weight: 600;
+}
+
+p{
+    position:relative;
+    text-align: center;
+}
+
+.p-trame{
+    position:relative;
+    text-align: left;
+}
+
+.h6-w{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    
+}
+.h5-w{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    
+}
+
+.h3-w{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.h4-w{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.h4-r{
+    color:red;
+    text-align: center;
+}
+
+.h2-w{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.h1-w{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+h5{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+
+.responsive{
+    position:relative; 
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+}
+
+.quote{
+    font-size: 35px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.shop{
+    position: relative;
+    left: 10%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+}
+
+.background{
+    background-image: url(images/Bookmark.jpg);
+    background-size: cover;
+}
+.shop_background{
+    background-color: #343a40;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23363d43'/%3E%3Cstop offset='1' stop-color='%23343a40'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2399acbd' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2399acbd' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.36'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+
+.box {
+    background-color: rgba(247, 244, 244, 0.801);
+    text-align: center;
+    border-radius: 5px;
+    width: 400px;
+    height: 600px;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+    line-height:initial;
+}
+
+.img{
+    width: 342px; 
+    height: 530px;
+    margin-top: 10%;
+    border-radius:10px;
+}
+
+.img-wishlist{
+    width: 120px; 
+    height: 180px;
+    margin-top: 10%;
+    border-radius:10px;
+}
+
+.img_found{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+}
+.box_search{
+    background-color: rgba(247, 244, 244, 0);
+    border-radius: 2px;
+    
+    height: 80px;
+    text-align: center;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    line-height:initial;
+}
+.input_search{
+    width: 30%;
+    height: 37px;
+    background-color: rgba(247, 244, 244, 0.801);
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.custom_select{
+    background-color: rgba(247, 244, 244, 0.801);
+    height: 37px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/*ACCOUNT.PHP*/
+.title-wishlist{
+    margin-top: 20%;
+    font-weight: bolder;
+}
+
+.author-wishlist{
+    margin-top: 44%;
+    font-weight: bolder;
+}
+
+.genre-wishlist{
+    margin-top: 72%;
+    font-weight: bolder;
+}
+
+.input_change{
+    width: 30%;
+    height: 37px;
+    background-color: rgba(247, 244, 244, 0.801);
+    border-radius: 4px;
+    font-size: 16px;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.change_button{
+    width: 45%;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    align-self: center;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    line-height:initial;
+}
+
+.input {
+    width: 80%;
+    height: 40px;
+    background-color: rgba(247, 244, 244, 0.801);
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.input_pass {
+    width: 70%;
+    height: 40px;
+    background-color: rgba(247, 244, 244, 0.801);
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.mycheckbox{
+    height: 40px;
+    background-color: rgba(247, 244, 244, 0.801);
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.mycheckbox2{
+    height: 40px;
+    background-color: rgba(247, 244, 244, 0.801);
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.dropbtn {
+    background-color: rgba(49, 40, 40, 0.801);
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: white;
+    min-width: 98px;
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: black;
+    background-color: white;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {
+    color: black;
+    background-color: white;
+}
+
+.fa-red {
+    color:rgb(196, 9, 9);
+    width: 30px;
+    height: 30px;
+    
+}
+
+.fa-white {
+    width: 30px;
+    height: 30px;
+    color: white;
+    
+}
+
+.nav-link{
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.navbarlogo{
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.book-button{
+    text-align: right;
+    margin-left: 80%;
+}
+
+.book-item{
+    margin-top: 80px;
+    font-weight: bolder;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+        <meta name="viewport" content="width=device-width, initial−scale=1.0"></meta>
+        <meta charset="utf-8"></meta>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+        <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" lang="javascript"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="signup.js" type="text/javascript" lang="javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../style.css"/>
+        
+    </head>
+    <body class="background">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <!--Logo-->
+            <a class="navbar-brand" href="../homepage.php"><h5 class="navbarlogo">BOOKMARK</h5></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="collapse navbar-collapse" id="navbarResponsive">
+                <!--Menù-->
+                <ul class="navbar-nav ml-auto">
+                    <li id="nav1" class="nav-item">
+                        <a class="nav-link" href="../homepage.php">HOME</a>
+                    </li>
+                    <li id="nav2" class="nav-item">
+                        <a class="nav-link" href="../shop/shop.php">SHOP</a>
+                    </li>
+                    <li id="nav3" class="nav-item">
+                        <a class="nav-link" href="../faq/faq.php">FAQ</a>
+                    </li>
+                    <li id="nav4" class="nav-item">
+                        <a class="nav-link" href="../login/login.html">LOGIN</a>
+                    </li>
+                </ul>
+            </span>
+        </nav>
+        <!--Signup form-->
+        <br><br><br>
+        <form action="signup.php" class="box" style="margin-top:3%" method="post" name="signupForm">
+            <img src="../images/logo.png" width="180" height="144">
+            <h1>Registrati</h1><br>
+            <input type="text" name="inputName" class="input" placeholder="Username" required autofocus/><br><br>
+            <input type="email" name="inputEmail" class="input" placeholder="Indirizzo email" required onkeyup="checkEmail();"/><br><br>
+            <input type="email" name="inputEmailConfirm" class="input" placeholder="Conferma il tuo indirizzo email" required onkeyup="checkEmailConf();"/><br><br>
+            <input type="password" id="password1" name="inputPassword" class="input_pass" placeholder="Password" required onkeyup="checkPassword();"/>
+            <button class="mycheckbox" type="button" name="ckbox" onclick="show1()">
+                <i id="icon1" class="fa fa-eye-slash"></i>
+            </button><br><br>
+            <input type="password" id="password2" name="inputPasswordConfirm" class="input_pass" placeholder="Conferma password" required onkeyup="checkPasswordConf();"/>
+            <button class="mycheckbox2" type="button" name="ckbox" onclick="show2()">
+                <i id="icon2" class="fa fa-eye-slash"></i>
+            </button><br/>
+            <br><br>
+            <button class="btn btn-dark" name="signupButton" type="submit">Registrati</button>
+        </form>
+        <!--Footer-->
+        <br><br><br><br><br><br><br><br>
+        <footer class="text-center text-lg-start bg-dark text-muted">
+            <br>
+            <p>  Powered by <a href="https://www.uniroma1.it/it/pagina-strutturale/home" title="LaSapienza" target="_blank">Università La Sapienza</a> – Linguaggi e Tecnologie per il Web</p>
+            <br>
+        </footer>
+    </body>
+</html>
