@@ -85,10 +85,8 @@ $$
 	DECLARE
 	r record;
 	BEGIN
-		FOR r IN SELECT * FROM users LOOP
-			UPDATE lovesbook SET username=NEW.name WHERE username=OLD.name;
-			UPDATE booking SET username=NEW.name WHERE username=OLD.name;
-		END LOOP;
+		UPDATE lovesbook SET username=NEW.name WHERE username=OLD.name;
+		UPDATE booking SET username=NEW.name WHERE username=OLD.name;
 		RETURN NULL;
 	END;
 $$ language plpgsql;
@@ -111,17 +109,3 @@ $$ language plpgsql;
 	
 CREATE TRIGGER trigger_rimozione AFTER DELETE ON users
 FOR EACH ROW EXECUTE PROCEDURE remove_user();
-
-
-
-CREATE OR REPLACE FUNCTION update_user() RETURNS
-TRIGGER AS
-$$
-	DECLARE
-	r record;
-	BEGIN
-		UPDATE lovesbook SET username=NEW.name WHERE username=OLD.name;
-		UPDATE booking SET username=NEW.name WHERE username=OLD.name;
-		RETURN NULL;
-	END;
-$$ language plpgsql;
