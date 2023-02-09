@@ -109,3 +109,6 @@ $$ language plpgsql;
 	
 CREATE TRIGGER trigger_rimozione AFTER DELETE ON users
 FOR EACH ROW EXECUTE PROCEDURE remove_user();
+
+
+aaaaaaaaaa
