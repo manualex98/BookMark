@@ -37,9 +37,6 @@
                     </li>
                     <?php 
                         if(isset($_SESSION['username'])) {
-
-
-                          
                           echo "<li class='nav-item dropdown'>
                           <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                           CIAO, ".$_SESSION['username']."
@@ -57,7 +54,6 @@
                           </li>";
                         }
                     ?>
-                    
                 </ul>
             </span>
         </nav>
@@ -117,9 +113,9 @@
                     <i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>
                     <br>
                     <span id="zonaDinamica">
-                    <p class="quote">I do believe something very magical can happen when you read a good book</p>
-                    <h4 style="font-weight: bold;">J.K. Rowling </h4>
-                </span>
+                        <p class="quote">I do believe something very magical can happen when you read a good book</p>
+                        <h4 style="font-weight: bold;">J.K. Rowling </h4>
+                    </span>
                     <i class="fa fa-quote-right fa-3x fa-pull-right" aria-hidden="true"></i><br><br><br>
                     <button type="button" id="quotes" class="btn btn-dark" onclick=caricaCitazione();>Genera una citazione casuale</button>
                 </div>
