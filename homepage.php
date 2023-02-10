@@ -159,7 +159,6 @@
         function gestisciResponse(e) {
             if (e.target.readyState == XMLHttpRequest.DONE && e.target.status == 200) {
                 document.getElementById("zonaDinamica").innerHTML= e.target.responseText;
-
                 i = Math.floor(Math.random() * 5) + 1;
             }
         }
