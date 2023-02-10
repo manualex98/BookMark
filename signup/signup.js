@@ -30,9 +30,7 @@ function checkEmail() {
     checkEmailConf();
     let input = document.signupForm.inputEmail;
     let email = input.value.toLowerCase().trim();
-
     let regex = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/, 'i');
-    
     if (email.match(regex)) {
         input.setCustomValidity('');
         input.style.borderColor = "rgb(167, 250, 167)";
@@ -59,14 +57,11 @@ function checkEmailConf() {
 
 function checkPassword() {
     checkPasswordConf();
-
     let input = document.signupForm.inputPassword;
     let password = input.value;
-
     let spazio = false;
-		
 	for (var i = 0; i <= password.length; i++) {
-        if (password.charAt(i) == " ") {			//se a un certo punto trova lo spazio (charAt restituisce il carattere in pos i)
+        if (password.charAt(i) == " ") {			
             spazio = true;
             break;
         }    
@@ -86,6 +81,7 @@ function checkPassword() {
     return true;
 }
 
+//se a un certo punto trova lo spazio (charAt restituisce il carattere in pos i)
 function checkPasswordConf() {
 
     if (document.signupForm.inputPassword.value != document.signupForm.inputPasswordConfirm.value) {
