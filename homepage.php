@@ -149,7 +149,7 @@
         </footer>
 
         <script>
-        var i=1;
+        let i=1;
         function caricaCitazione(e) {
           var httpRequest = new XMLHttpRequest();
           httpRequest.onreadystatechange = gestisciResponse;
@@ -159,12 +159,8 @@
         function gestisciResponse(e) {
             if (e.target.readyState == XMLHttpRequest.DONE && e.target.status == 200) {
                 document.getElementById("zonaDinamica").innerHTML= e.target.responseText;
-                if(i==5){
-                    i=1;
-                }
-                else{
-                    i++;
-                }
+
+                i = Math.floor(Math.random() * 5) + 1;
             }
         }
         </script>
