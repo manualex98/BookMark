@@ -16,7 +16,6 @@
                     else {
                         $name=$_POST['inputName'];
                         $password=md5($_POST['inputPassword']);
-
                         $q2="insert into users values ($1, $2, $3)";
                         $data= pg_query_params($dbconn, $q2, array($name, $email, $password));
                         if ($data){
