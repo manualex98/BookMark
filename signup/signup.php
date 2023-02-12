@@ -7,10 +7,19 @@
                 }
                 else{
                     $email = $_POST['inputEmail'];
-                    $ql=" select * from users where email= $1";
-                    $result=pg_query_params($dbconn, $ql, array($email));
-                    if ($line= pg_fetch_array($result, null, PGSQL_ASSOC)){
-                        echo "<h1> Attenzione, esiste già un account con la tua email <br>o l'username è già stato scelto</h1>
+                    $name = $_POST['inputName'];
+                    $ql1="select * from users where email= $1";
+                    $ql2="select * from users where name= $1";
+                    $result1=pg_query_params($dbconn, $ql1, array($email));
+                    $result2=pg_query_params($dbconn, $ql2, array($name));
+
+                    if ($line= pg_fetch_array($result1, null, PGSQL_ASSOC)){
+                        echo "<h1> Attenzione, esiste già un account con la tua email</h1><br>
+                        <a href=../login/login.html>Clicca qui per accedere.</a><br><br>
+                        <a href=signup.html>o qui per registrarti</a>";
+                    }
+                    else if($line= pg_fetch_array($result2, null, PGSQL_ASSOC)){
+                        echo "<h1> Attenzione, esiste già un account con l'username che hai scelto</h1><br>
                         <a href=../login/login.html>Clicca qui per accedere.</a><br><br>
                         <a href=signup.html>o qui per registrarti</a>";
                     }
