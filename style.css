@@ -167,17 +167,17 @@ h3{
 
 /*ACCOUNT.PHP*/
 .title-wishlist{
-    margin-top: 20%;
+    margin-top: 80px;
     font-weight: bolder;
 }
 
 .author-wishlist{
-    margin-top: 44%;
+    margin-top: 80px;
     font-weight: bolder;
 }
 
 .genre-wishlist{
-    margin-top: 72%;
+    margin-top: 80px;
     font-weight: bolder;
 }
 

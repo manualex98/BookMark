@@ -117,7 +117,7 @@ session_start();
 
                 echo "<div class='container text-center'>";
                 echo "<div class='row'>";
-                $ql="select * from books";
+                $ql="select * from books limit 6";
                     $result=pg_query($dbconn,$ql) or die('Query failed: '. pg_last_error());
                     while($line= pg_fetch_array($result, null, PGSQL_ASSOC)){
                         $title = str_replace(" ","-",$line['name']);
