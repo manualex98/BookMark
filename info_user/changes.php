@@ -18,13 +18,19 @@
             header("Location: account.php");
         }
         else{
-            $ql="update users set email = $1 where name =$2";    //altrimenti aggiorna ed effettua il logout
-
-            $result=pg_query_params($dbconn,$ql,array($email,$_SESSION['username']));
-        
-            //echo "nuova email: ".$_POST['email']."";
-            unset($_SESSION['username']);
-            header("Location: ../login/login.html");
+            //verifico se l'email è disponibile
+            $ql = "select * from users where email =$1";
+            $result=pg_query_params($dbconn,$ql,array($email));
+            if ($line= pg_fetch_array($result, null, PGSQL_ASSOC)){   //se è già usata lo notifico
+                header("Location: account.php?change_em=false");
+            }
+            else{
+                $ql="update users set email = $1 where name =$2";    //altrimenti aggiorna ed effettua il logout
+                $result=pg_query_params($dbconn,$ql,array($email,$_SESSION['username']));
+                unset($_SESSION['username']);
+                header("Location: ../login/login.html");
+            }
+            
         }
         
         
@@ -36,12 +42,19 @@
             header("Location: account.php");
         }
         else{
-            $ql="update users set name = $1 where email =$2";  //altrimenti aggiorna ed effettua il logout
-
-            $result=pg_query_params($dbconn,$ql,array($username,$email));
-        
-            unset($_SESSION['username']);
-            header("Location: ../login/login.html");
+            //verifico se l'username è disponibile
+            $ql = "select * from users where name =$1";
+            $result=pg_query_params($dbconn,$ql,array($username));
+            if ($line= pg_fetch_array($result, null, PGSQL_ASSOC)){   //se è già preso lo notifico
+                header("Location: account.php?change_us=false");
+            }
+            else{
+                $ql="update users set name = $1 where email =$2";  //altrimenti aggiorna ed effettua il logout
+                $result=pg_query_params($dbconn,$ql,array($username,$email));
+                unset($_SESSION['username']);
+                header("Location: ../login/login.html");
+            }
+            
         }
         
     }

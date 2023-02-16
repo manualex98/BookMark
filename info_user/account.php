@@ -43,7 +43,7 @@ session_start();
                             CIAO, ".$_SESSION['username']."
                             </a>
                             <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                              <a class='dropdown-item' href='#'>Account</a>
+                              <a class='dropdown-item' href='account.php'>Account</a>
                               <div class='dropdown-divider'></div>
                               <a class='dropdown-item' href='../logout.php'>Logout</a>
                             </div>
@@ -68,7 +68,7 @@ session_start();
         
             echo "<h2 class='h2-w font-weight-bolder'>Il tuo profilo, ".$_SESSION['username']."</h2>";
         ?>
-        <form action="changes.php" method="POST">
+        <form name="accountForm" action="changes.php" method="POST">
 
             <table class="table">
                 <tr>
@@ -77,12 +77,13 @@ session_start();
                     </td>
                     <td>
                         <?php
-                            echo "<input class='input_change' name='email' size='40' type='email' value='".$line['email']."'></input>";
+                            if(isset($_GET['change_em'])) echo "<h6 class=' font-weight-bolder'><font color='red'>Email già esistente.</font></h6>";
+                            echo "<input class='input_change' name='email' size='40' type='email' value='".$line['email']."' onkeyup='checkEmail()'></input>";
                         ?>
                     </td>
                     
                     <td>
-                        <input class="btn btn-light" type="submit" name="subemail" value="Modifica">
+                        <input class="btn btn-light" type="submit" name="subemail" id="button1" value="Modifica" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -91,11 +92,12 @@ session_start();
                     </td>
                     <td>
                         <?php
-                            echo "<input class='input_change' name='username' type='text' value='".$line['name']."'></input>";
+                            if(isset($_GET['change_us'])) echo "<h6 class=' font-weight-bolder'><font color='red'>Username non disponibile.</font></h6>";
+                            echo "<input class='input_change' name='username' type='text' value='".$line['name']."' onkeyup='disable_but()'></input>";
                         ?>
                     </td>
                     <td>
-                        <input class="btn btn-light" type="submit" name="subuser" value="Modifica">
+                        <input class="btn btn-light" type="submit"  id ="button2" name="subuser" value="Modifica" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -105,14 +107,14 @@ session_start();
                     <td>
                         <?php
                         
-                            echo "<input id='password1' name='password' class='input_change' type='password' value='".$line['password']."' onclick='clean()'></input>";
+                            echo "<input id='password1' name='password' class='input_change' type='password' value='".$line['password']."' onclick='clean()' onkeyup='checkPassword()'></input>";
                         ?>
                         <button class="mycheckbox" type="button" id="ckbox" name="ckbox" onclick="show1()" disabled>
                             <i id="icon" class="fa fa-eye-slash"></i>
                         </button>
                     </td>
                     <td>
-                        <input class="btn btn-light" type="submit" name="subpass" value="Modifica">
+                        <input class="btn btn-light" type="submit" id="button3" name="subpass" value="Modifica" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -197,6 +199,11 @@ session_start();
                 
             </div>
             
+            <script>
+                function disable_but(){
+                    document.getElementById('button2').disabled=false;
+                }
+            </script>
 
         
         

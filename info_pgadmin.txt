@@ -78,6 +78,7 @@ INSERT INTO hasbook(library,book,quantity,price) VALUES
 ('Libreria da Paolo','Ventimila leghe sotto i mari','10','9.99'),
 ('Mondadori','Guida galattica per gli autostoppisti','1','20.00');
 
+insert into users(name,email,password) values ('Test1','test1@gmail.com','ciaociao');
 
 CREATE OR REPLACE FUNCTION update_user() RETURNS
 TRIGGER AS
