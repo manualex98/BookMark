@@ -40,14 +40,14 @@ function checkEmail() {
 function checkPassword() {
     let input = document.accountForm.password;
     let password = input.value;
-    let spazio = false;
-	for (var i = 0; i <= password.length; i++) {
+    let spazio = password.indexOf(' ');
+	/*for (var i = 0; i <= password.length; i++) {
         if (password.charAt(i) == " ") {			
             spazio = true;
             break;
         }    
-    }
-    if (spazio) {																				
+    }*/
+    if (spazio==-1) {																				
         input.setCustomValidity('Password can not contain space');
         input.style.borderColor = "rgb(255, 102, 102)";
         document.getElementById("button3").disabled=true;
