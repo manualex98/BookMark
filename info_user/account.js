@@ -30,7 +30,7 @@ function checkEmail() {
         return true;
     }
     else {
-        input.setCustomValidity('Insert a valid email');
+        input.setCustomValidity('Inserisci un email valida');
         input.style.borderColor = "rgb(255, 102, 102)";
         document.getElementById("button1").disabled=true;
         return false;
@@ -41,20 +41,14 @@ function checkPassword() {
     let input = document.accountForm.password;
     let password = input.value;
     let spazio = password.indexOf(' ');
-	/*for (var i = 0; i <= password.length; i++) {
-        if (password.charAt(i) == " ") {			
-            spazio = true;
-            break;
-        }    
-    }*/
     if (spazio==-1) {																				
-        input.setCustomValidity('Password can not contain space');
+        input.setCustomValidity('La password non può contenere spazi');
         input.style.borderColor = "rgb(255, 102, 102)";
         document.getElementById("button3").disabled=true;
         return false;
     }
     else if (password.length < 8) {
-        input.setCustomValidity('Password needs to be at least 8 characters long');
+        input.setCustomValidity('La password deve avere almeno 8 caratteri.');
         input.style.borderColor = "rgb(255, 102, 102)";
         document.getElementById("button3").disabled=true;
         return false;
