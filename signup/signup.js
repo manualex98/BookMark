@@ -59,14 +59,8 @@ function checkPassword() {
     checkPasswordConf();
     let input = document.signupForm.inputPassword;
     let password = input.value;
-    let spazio = false;
-	for (var i = 0; i <= password.length; i++) {
-        if (password.charAt(i) == " ") {			
-            spazio = true;
-            break;
-        }    
-    }
-    if (spazio) {																				
+    let spazio = password.indexOf(" ");
+    if (spazio!=-1){																				
         input.setCustomValidity('Password can not contain space');
         input.style.borderColor = "rgb(255, 102, 102)";
         return false;
