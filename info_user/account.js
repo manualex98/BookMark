@@ -40,8 +40,8 @@ function checkEmail() {
 function checkPassword() {
     let input = document.accountForm.password;
     let password = input.value;
-    let spazio = password.indexOf(' ');
-    if (spazio==-1) {																				
+    let spazio = password.indexOf(" ");
+    if (spazio!=-1) {																				
         input.setCustomValidity('La password non può contenere spazi');
         input.style.borderColor = "rgb(255, 102, 102)";
         document.getElementById("button3").disabled=true;
@@ -53,8 +53,10 @@ function checkPassword() {
         document.getElementById("button3").disabled=true;
         return false;
     }
-    input.setCustomValidity("");
-    input.style.borderColor = "rgb(167, 250, 167)";
-    document.getElementById("button3").disabled=false;
-    return true;
+    else{
+        input.setCustomValidity("");
+        input.style.borderColor = "rgb(167, 250, 167)";
+        document.getElementById("button3").disabled=false;
+        return true;
+    }
 }

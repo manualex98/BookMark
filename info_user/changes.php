@@ -66,7 +66,7 @@
         else{
             $ql="update users set password = $1 where name =$2";   //altrimenti aggiorna ed effettua il logout
 
-            $result=pg_query_params($dbconn,$ql,array($password,$_SESSION['username']));
+            $result=pg_query_params($dbconn,$ql,array(md5($password),$_SESSION['username']));
         
             //echo "nuova password: ".$_POST['password']."";
             unset($_SESSION['username']);
